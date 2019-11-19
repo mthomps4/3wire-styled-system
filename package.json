@@ -1,0 +1,42 @@
+{
+  "name": "3wire-styled-system",
+  "version": "0.0.4",
+  "description": "component library built with styled-system and emotion",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "styled-system",
+    "emotion",
+    "component-library"
+  ],
+  "author": "Matthew Thompson",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@types/node": "^12.12.7",
+    "@types/react": "^16.9.3",
+    "@types/react-dom": "^16.9.1",
+    "@types/styled-system": "^5.1.4",
+    "@types/styled-system__should-forward-prop": "^5.1.0",
+    "@types/styled-system__theme-get": "^5.0.0",
+    "babel-plugin-emotion": "^10.0.23",
+    "tslib": "^1.10.0",
+    "typescript": "^3.7.2"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.22",
+    "@emotion/styled": "^10.0.23",
+    "@styled-system/should-forward-prop": "^5.1.2",
+    "@styled-system/theme-get": "^5.1.2",
+    "emotion": "^10.0.23",
+    "emotion-theming": "^10.0.19",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "styled-system": "^5.1.2"
+  }
+}
