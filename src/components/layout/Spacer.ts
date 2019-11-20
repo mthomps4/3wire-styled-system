@@ -3,7 +3,7 @@ import { compose, flexbox, FlexboxProps, grid, GridProps, layout, LayoutProps, s
 
 export type SpacerProps = FlexboxProps & GridProps & LayoutProps & SpaceProps;
 
-const Spacer = styled('div')<SpaceProps>(
+const Spacer = styled<'div', SpaceProps>('div')(
   {
     boxSizing: 'border-box'
   },
