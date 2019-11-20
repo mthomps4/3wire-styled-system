@@ -52,7 +52,9 @@ const applyBoolStyles = ({ centerContent, flex }: ContainerStyleProps) => {
   return styles;
 };
 
-const Container = styled<'div', ContainerProps>('div')(
+type optionalProps = null | ContainerProps;
+
+const Container = styled<'div', optionalProps>('div')(
   {
     boxSizing: 'border-box'
   },
