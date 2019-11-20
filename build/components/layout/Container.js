@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const styled_1 = require("@emotion/styled");
-// import shouldForwardProp from '@styled-system/should-forward-prop';
 const styled_system_1 = require("styled-system");
 const applyBoolStyles = ({ centerContent, flex }) => {
     let styles = '';

@@ -4,41 +4,43 @@ const styled_1 = require("@emotion/styled");
 const theme_get_1 = require("@styled-system/theme-get");
 const styled_system_1 = require("styled-system");
 const applyBoolStyles = (props) => {
-    const { success, info, warning, danger, primary, secondary, theme, successBox, infoBox, warningBox, dangerBox } = props;
-    if (success && theme)
+    const { success, info, warning, danger, primary, secondary, 
+    // theme,
+    successBox, infoBox, warningBox, dangerBox } = props;
+    if (success)
         return `color: ${theme_get_1.themeGet('colors.success', 'green')(props)};`;
-    if (info && theme)
+    if (info)
         return `color: ${theme_get_1.themeGet('colors.info', 'blue')(props)};`;
-    if (warning && theme)
+    if (warning)
         return `color: ${theme_get_1.themeGet('colors.warning', 'orange')(props)};`;
-    if (danger && theme)
+    if (danger)
         return `color: ${theme_get_1.themeGet('colors.danger', 'maroon')(props)};`;
-    if (primary && theme)
+    if (primary)
         return `color: ${theme_get_1.themeGet('colors.primary', 'purple')(props)}`;
-    if (secondary && theme)
+    if (secondary)
         return `color: ${theme_get_1.themeGet('colors.secondary', 'pink')(props)}`;
-    if (successBox && theme)
+    if (successBox)
         return `
       color: ${theme_get_1.themeGet('colors.success', 'green')(props)};
       background-color: ${theme_get_1.themeGet('bg.success', 'lime')(props)};
       padding: 1em;
       margin-bottom: 1em;
     `;
-    if (infoBox && theme)
+    if (infoBox)
         return `
       color: ${theme_get_1.themeGet('colors.info', 'blue')(props)};
       background-color: ${theme_get_1.themeGet('bg.info', 'cyan')(props)};
       padding: 1em;
       margin-bottom: 1em;
     `;
-    if (warningBox && theme)
+    if (warningBox)
         return `
       color: ${theme_get_1.themeGet('colors.warning', 'orange')(props)};
       background-color: ${theme_get_1.themeGet('bg.warning', 'yellow')(props)};
       padding: 1em;
       margin-bottom: 1em;
     `;
-    if (dangerBox && theme)
+    if (dangerBox)
         return `
       color: ${theme_get_1.themeGet('colors.danger', 'maroon')(props)};
       background-color: ${theme_get_1.themeGet('bg.danger', 'red')(props)};
