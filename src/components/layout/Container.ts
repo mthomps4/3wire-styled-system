@@ -32,29 +32,28 @@ export interface ContainerStyleProps {
   theme?: ThemeProps;
   variant?: ResponsiveValue<string>;
   centerContent?: Boolean;
-  flex?: Boolean;
 }
 
-export type ContainerProps = ContainerStyleProps &
-  ColorProps &
-  LayoutProps &
-  SpaceProps &
-  GridProps &
-  FlexboxProps &
-  BackgroundProps &
-  BorderProps &
-  PositionProps;
+export interface ContainerProps
+  extends ContainerStyleProps,
+    ColorProps,
+    LayoutProps,
+    SpaceProps,
+    GridProps,
+    FlexboxProps,
+    BackgroundProps,
+    BorderProps,
+    PositionProps {
+  color?: any;
+}
 
-const applyBoolStyles = ({ centerContent, flex }: ContainerStyleProps) => {
+const applyBoolStyles = ({ centerContent }: ContainerStyleProps) => {
   let styles = '';
   if (centerContent) styles = styles + 'display: flex; justify-content: center; align-items: center;';
-  if (flex) styles = styles + 'display: flex;';
   return styles;
 };
 
-type optionalProps = null | ContainerProps;
-
-const Container = styled<'div', optionalProps>('div')(
+const Container = styled<'div', ContainerProps>('div')<ContainerProps>(
   {
     boxSizing: 'border-box'
   },

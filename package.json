@@ -1,6 +1,6 @@
 {
   "name": "@3wirebuild/styled-system",
-  "version": "0.0.62",
+  "version": "0.0.64",
   "description": "component library built with styled-system and emotion",
   "main": "build/index.js",
   "types": "build/index.d.ts",

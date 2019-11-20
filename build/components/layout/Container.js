@@ -2,12 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const styled_1 = require("@emotion/styled");
 const styled_system_1 = require("styled-system");
-const applyBoolStyles = ({ centerContent, flex }) => {
+const applyBoolStyles = ({ centerContent }) => {
     let styles = '';
     if (centerContent)
         styles = styles + 'display: flex; justify-content: center; align-items: center;';
-    if (flex)
-        styles = styles + 'display: flex;';
     return styles;
 };
 const Container = styled_1.default('div')({
