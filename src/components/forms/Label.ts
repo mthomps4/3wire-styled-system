@@ -19,18 +19,19 @@ import {
   TypographyProps
 } from 'styled-system';
 
-export type LabelProps = TypographyProps &
-  ColorProps &
-  SpaceProps &
-  LayoutProps &
-  BorderProps &
-  FlexboxProps &
-  GridProps &
-  PositionProps;
+export interface LabelProps
+  extends TypographyProps,
+    ColorProps,
+    SpaceProps,
+    LayoutProps,
+    BorderProps,
+    FlexboxProps,
+    GridProps,
+    PositionProps {
+  color?: any;
+}
 
-const Label = styled<'label', LabelProps>('label')(
-  compose(typography, color, space, layout, border, position, flexbox, grid)
-);
+const Label = styled('label')<LabelProps>(compose(typography, color, space, layout, border, position, flexbox, grid));
 
 Label.defaultProps = {};
 

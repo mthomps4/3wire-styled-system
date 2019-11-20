@@ -19,16 +19,22 @@ import {
   TypographyProps
 } from 'styled-system';
 
-export type TextInputProps = TypographyProps &
-  ColorProps &
-  SpaceProps &
-  LayoutProps &
-  BorderProps &
-  FlexboxProps &
-  GridProps &
-  PositionProps;
+export interface TextInputProps
+  extends TypographyProps,
+    ColorProps,
+    SpaceProps,
+    LayoutProps,
+    BorderProps,
+    FlexboxProps,
+    GridProps,
+    PositionProps {
+  color?: any;
+  height?: any;
+  width?: any;
+  size?: any;
+}
 
-const TextInput = styled<'input', TextInputProps>('input')(
+const TextInput = styled('input')<TextInputProps>(
   {
     type: 'text'
   },

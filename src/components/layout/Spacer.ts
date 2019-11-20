@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 import { compose, flexbox, FlexboxProps, grid, GridProps, layout, LayoutProps, space, SpaceProps } from 'styled-system';
 
-export type SpacerProps = FlexboxProps & GridProps & LayoutProps & SpaceProps;
+export interface SpacerProps extends FlexboxProps, GridProps, LayoutProps, SpaceProps {}
 
-const Spacer = styled<'div', SpaceProps>('div')(
+const Spacer = styled('div')<SpacerProps>(
   {
     boxSizing: 'border-box'
   },

@@ -21,27 +21,28 @@ import {
 
 export interface FormStyleProps {
   centerContent?: Boolean;
-  flex?: Boolean;
 }
 
-export type FormProps = FormStyleProps &
-  ColorProps &
-  LayoutProps &
-  SpaceProps &
-  GridProps &
-  FlexboxProps &
-  BackgroundProps &
-  BorderProps &
-  PositionProps;
+export interface FormProps
+  extends FormStyleProps,
+    ColorProps,
+    LayoutProps,
+    SpaceProps,
+    GridProps,
+    FlexboxProps,
+    BackgroundProps,
+    BorderProps,
+    PositionProps {
+  color?: any;
+}
 
-const applyBoolStyles = ({ centerContent, flex }: FormStyleProps) => {
+const applyBoolStyles = ({ centerContent }: FormStyleProps) => {
   let styles = '';
   if (centerContent) styles = styles + 'display: flex; justify-content: center; align-items: center;';
-  if (flex) styles = styles + 'display: flex;';
   return styles;
 };
 
-const Form = styled<'form', FormProps>('form')(
+const Form = styled('form')<FormProps>(
   applyBoolStyles,
   compose(space, layout, color, background, border, position, flexbox, grid)
 );

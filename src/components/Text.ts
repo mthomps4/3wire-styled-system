@@ -18,7 +18,9 @@ export interface TextBooleanProps {
   dangerBox?: Boolean;
 }
 
-export type TextProps = TextBooleanProps & ColorProps & TypographyProps & SpaceProps;
+export interface TextProps extends ColorProps, TypographyProps, SpaceProps, TextBooleanProps {
+  color?: any;
+}
 
 const applyBoolStyles = (props: TextBooleanProps) => {
   const {
@@ -73,7 +75,7 @@ const applyBoolStyles = (props: TextBooleanProps) => {
   return;
 };
 
-const Text = styled<'div', TextProps>('div')(applyBoolStyles, compose(space, color, typography));
+const Text = styled('div')<TextProps>(applyBoolStyles, compose(space, color, typography));
 
 Text.defaultProps = {};
 
