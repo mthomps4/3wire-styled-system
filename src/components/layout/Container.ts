@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { HTMLProps } from 'react';
 import {
   background,
   BackgroundProps,
@@ -20,7 +21,6 @@ import {
   variant
 } from 'styled-system';
 import { ThemeProps } from '../../../index';
-
 type ResponsiveValue<T> =
   | T
   | (T | null)[]
@@ -35,7 +35,8 @@ export interface ContainerStyleProps {
 }
 
 export interface ContainerProps
-  extends ContainerStyleProps,
+  extends Omit<HTMLProps<HTMLDivElement>, 'color' | 'height' | 'size' | 'width'>,
+    ContainerStyleProps,
     ColorProps,
     LayoutProps,
     SpaceProps,
@@ -44,7 +45,10 @@ export interface ContainerProps
     BackgroundProps,
     BorderProps,
     PositionProps {
-  color?: any;
+  color?: string;
+  hight?: number | string;
+  width?: number | string;
+  size?: any;
 }
 
 const applyBoolStyles = ({ centerContent }: ContainerStyleProps) => {
