@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { HTMLAttributes } from 'react';
 import {
   background,
   BackgroundProps,
@@ -29,9 +28,20 @@ export interface ContainerStyleProps {
   centerContent?: Boolean;
 }
 
+// export type ContainerProps = ColorProps &
+//   LayoutProps &
+//   SpaceProps &
+//   GridProps &
+//   FlexboxProps &
+//   BackgroundProps &
+//   BorderProps &
+//   PositionProps &
+//   ContainerStyleProps;
+
+// DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>
+
 export interface ContainerProps
-  extends Omit<HTMLAttributes<HTMLDivElement>, 'color'>,
-    ContainerStyleProps,
+  extends ContainerStyleProps,
     ColorProps,
     LayoutProps,
     SpaceProps,
@@ -39,19 +49,7 @@ export interface ContainerProps
     FlexboxProps,
     BackgroundProps,
     BorderProps,
-    PositionProps {
-  color?: any;
-}
-
-// export type ContainerProps = ContainerStyleProps &
-//   ColorProps &
-//   LayoutProps &
-//   SpaceProps &
-//   GridProps &
-//   FlexboxProps &
-//   BackgroundProps &
-//   BorderProps &
-//   PositionProps;
+    PositionProps {}
 
 const applyBoolStyles = ({ centerContent }: ContainerStyleProps) => {
   let styles = '';

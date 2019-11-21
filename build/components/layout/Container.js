@@ -1,16 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const styled_1 = require("@emotion/styled");
+const prop_types_1 = require("prop-types");
 const styled_system_1 = require("styled-system");
-// export type ContainerProps = ContainerStyleProps &
-//   ColorProps &
-//   LayoutProps &
-//   SpaceProps &
-//   GridProps &
-//   FlexboxProps &
-//   BackgroundProps &
-//   BorderProps &
-//   PositionProps;
+{
+    styled_system_1.color ?  : prop_types_1.any;
+}
+;
 const applyBoolStyles = ({ centerContent }) => {
     let styles = '';
     if (centerContent)
