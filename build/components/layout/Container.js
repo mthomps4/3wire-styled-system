@@ -2,6 +2,15 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const styled_1 = require("@emotion/styled");
 const styled_system_1 = require("styled-system");
+// export type ContainerProps = ContainerStyleProps &
+//   ColorProps &
+//   LayoutProps &
+//   SpaceProps &
+//   GridProps &
+//   FlexboxProps &
+//   BackgroundProps &
+//   BorderProps &
+//   PositionProps;
 const applyBoolStyles = ({ centerContent }) => {
     let styles = '';
     if (centerContent)
