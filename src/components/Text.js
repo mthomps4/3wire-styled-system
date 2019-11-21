@@ -1,27 +1,8 @@
 import styled from '@emotion/styled';
 import { themeGet } from '@styled-system/theme-get';
-import { color, ColorProps, compose, space, SpaceProps, Theme, typography, TypographyProps } from 'styled-system';
+import { color, compose, space, typography } from 'styled-system';
 
-export interface TextBooleanProps {
-  // theme is passed as a prop from ThemeProvider via App
-  theme?: Theme;
-  success?: Boolean;
-  info?: Boolean;
-  warning?: Boolean;
-  danger?: Boolean;
-  primary?: Boolean;
-  secondary?: Boolean;
-  successBox?: Boolean;
-  infoBox?: Boolean;
-  warningBox?: Boolean;
-  dangerBox?: Boolean;
-}
-
-export interface TextProps extends ColorProps, TypographyProps, SpaceProps, TextBooleanProps {
-  color?: any;
-}
-
-const applyBoolStyles = (props: TextBooleanProps) => {
+const applyBoolStyles = props => {
   const { success, info, warning, danger, primary, secondary, successBox, infoBox, warningBox, dangerBox } = props;
 
   if (success) return `color: ${themeGet('colors.success', 'green')(props)};`;
@@ -62,7 +43,7 @@ const applyBoolStyles = (props: TextBooleanProps) => {
   return;
 };
 
-const Text = styled('div')<TextProps>(applyBoolStyles, compose(space, color, typography));
+const Text = styled('div')(applyBoolStyles, compose(space, color, typography));
 
 Text.defaultProps = {};
 

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
-import Container, { ContainerProps } from './Container';
+import Container from './Container';
 
-const Row = styled(Container)<ContainerProps>({
+const Row = styled(Container)({
   display: 'flex',
   flexDirection: 'row'
 });

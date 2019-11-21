@@ -1,11 +1,11 @@
 {
   "name": "@3wirebuild/styled-system",
-  "version": "0.0.69",
+  "version": "0.0.70",
   "description": "component library built with styled-system and emotion",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
+  "main": "compiled.js",
   "scripts": {
     "build": "tsc -p .",
+    "babel": "babel ./src/index.js --out-file compiled.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -16,24 +16,16 @@
   "author": "Matthew Thompson",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
-    "@types/node": "^12.12.7",
-    "@types/react": "^16.9.3",
-    "@types/react-dom": "^16.9.1",
-    "@types/styled-system": "^5.1.4",
-    "@types/styled-system__should-forward-prop": "^5.1.0",
-    "@types/styled-system__theme-get": "^5.0.0",
-    "babel-plugin-emotion": "^10.0.23",
-    "tslib": "^1.10.0",
-    "typescript": "^3.7.2"
+    "babel-plugin-emotion": "^10.0.23"
   },
   "dependencies": {
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.23",
-    "@styled-system/should-forward-prop": "^5.1.2",
     "@styled-system/theme-get": "^5.1.2",
-    "csstype": "^2.6.7",
     "emotion": "^10.0.23",
     "emotion-theming": "^10.0.19",
     "react": "^16.12.0",
