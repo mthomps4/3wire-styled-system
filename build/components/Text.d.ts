@@ -1,8 +1,7 @@
 /// <reference types="react" />
-import { ColorProps, SpaceProps, TypographyProps } from 'styled-system';
-import { ThemeProps } from '../../index';
+import { ColorProps, SpaceProps, Theme, TypographyProps } from 'styled-system';
 export interface TextBooleanProps {
-    theme?: ThemeProps;
+    theme?: Theme;
     success?: Boolean;
     info?: Boolean;
     warning?: Boolean;

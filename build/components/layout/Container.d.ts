@@ -1,14 +1,10 @@
-/// <reference types="react" />
-import * as CSS from 'csstype';
-import { BackgroundProps, BorderProps, FlexboxProps, GridProps, LayoutProps, PositionProps, ResponsiveValue, SpaceProps } from 'styled-system';
-import { ThemeProps } from '../../../index';
+import { BackgroundProps, BorderProps, ColorProps, FlexboxProps, GridProps, LayoutProps, PositionProps, ResponsiveValue, SpaceProps, Theme } from 'styled-system';
 export interface ContainerStyleProps {
-    theme?: ThemeProps;
+    theme?: Theme;
     variant?: ResponsiveValue<string>;
     centerContent?: Boolean;
-    textColor?: ResponsiveValue<CSS.ColorProperty>;
 }
-export interface ContainerProps extends ContainerStyleProps, LayoutProps, SpaceProps, GridProps, FlexboxProps, BackgroundProps, BorderProps, PositionProps {
+export interface ContainerProps extends ContainerStyleProps, ColorProps, LayoutProps, SpaceProps, GridProps, FlexboxProps, BackgroundProps, BorderProps, PositionProps {
 }
-declare const Container: import("@emotion/styled-base").StyledComponent<import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLDivElement>, HTMLDivElement>, ContainerProps, object>;
+declare const Container: any;
 export default Container;

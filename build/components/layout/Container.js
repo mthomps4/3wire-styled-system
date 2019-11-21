@@ -2,11 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const styled_1 = require("@emotion/styled");
 const styled_system_1 = require("styled-system");
-const textColor = styled_system_1.style({
-    prop: 'textColor',
-    cssProperty: 'color',
-    key: 'colors'
-});
 const applyBoolStyles = ({ centerContent }) => {
     let styles = '';
     if (centerContent)
@@ -15,7 +10,9 @@ const applyBoolStyles = ({ centerContent }) => {
 };
 const Container = styled_1.default('div')({
     boxSizing: 'border-box'
-}, applyBoolStyles, styled_system_1.compose(textColor, styled_system_1.space, styled_system_1.layout, styled_system_1.color, styled_system_1.background, styled_system_1.border, styled_system_1.position, styled_system_1.flexbox, styled_system_1.grid, styled_system_1.variant({
+}, applyBoolStyles, styled_system_1.compose(
+// textColor,
+styled_system_1.space, styled_system_1.layout, styled_system_1.color, styled_system_1.background, styled_system_1.border, styled_system_1.position, styled_system_1.flexbox, styled_system_1.grid, styled_system_1.variant({
     variants: {
         row: {
             display: 'flex',

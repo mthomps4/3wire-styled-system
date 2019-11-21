@@ -4,9 +4,7 @@ const styled_1 = require("@emotion/styled");
 const theme_get_1 = require("@styled-system/theme-get");
 const styled_system_1 = require("styled-system");
 const applyBoolStyles = (props) => {
-    const { success, info, warning, danger, primary, secondary, 
-    // theme,
-    successBox, infoBox, warningBox, dangerBox } = props;
+    const { success, info, warning, danger, primary, secondary, successBox, infoBox, warningBox, dangerBox } = props;
     if (success)
         return `color: ${theme_get_1.themeGet('colors.success', 'green')(props)};`;
     if (info)
