@@ -1,4 +1,4 @@
-import { ThemeProps } from '../index';
+import { Theme } from 'styled-system';
 
 const breakpoints: any = ['40em', '52em', '64em', '80em'];
 // aliases
@@ -7,7 +7,7 @@ breakpoints.md = breakpoints[1];
 breakpoints.lg = breakpoints[2];
 breakpoints.xl = breakpoints[3];
 
-export default <ThemeProps>{
+export default <Theme>{
   colors: {
     black: 'black',
     white: 'white',

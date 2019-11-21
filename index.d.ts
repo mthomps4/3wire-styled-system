@@ -20,7 +20,3 @@ export interface ColorTypes {
   primary: string;
   secondary: string;
 }
-export interface ThemeProps {
-  colors: ColorTypes;
-  bg: BgColorTypes;
-}

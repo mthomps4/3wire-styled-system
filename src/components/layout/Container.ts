@@ -1,11 +1,11 @@
 import styled from '@emotion/styled';
-import * as CSS from 'csstype';
 import {
   background,
   BackgroundProps,
   border,
   BorderProps,
   color,
+  ColorProps,
   compose,
   flexbox,
   FlexboxProps,
@@ -18,27 +18,26 @@ import {
   ResponsiveValue,
   space,
   SpaceProps,
-  style,
+  Theme,
   variant
 } from 'styled-system';
-import { ThemeProps } from '../../../index';
 
-const textColor = style({
-  prop: 'textColor',
-  cssProperty: 'color',
-  key: 'colors'
-});
+// const textColor = style({
+//   prop: 'textColor',
+//   cssProperty: 'color',
+//   key: 'colors'
+// });
 
 export interface ContainerStyleProps {
-  theme?: ThemeProps;
+  theme?: Theme;
   variant?: ResponsiveValue<string>;
   centerContent?: Boolean;
-  textColor?: ResponsiveValue<CSS.ColorProperty>;
+  // textColor?: ResponsiveValue<CSS.ColorProperty>;
 }
 
 export interface ContainerProps
   extends ContainerStyleProps,
-    // ColorProps,
+    ColorProps,
     LayoutProps,
     SpaceProps,
     GridProps,
@@ -59,7 +58,7 @@ const Container = styled('div')<ContainerProps>(
   },
   applyBoolStyles,
   compose(
-    textColor,
+    // textColor,
     space,
     layout,
     color,
