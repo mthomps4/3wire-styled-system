@@ -1,6 +1,6 @@
 {
   "name": "@3wirebuild/styled-system",
-  "version": "0.0.68",
+  "version": "0.0.69",
   "description": "component library built with styled-system and emotion",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -33,6 +33,7 @@
     "@emotion/styled": "^10.0.23",
     "@styled-system/should-forward-prop": "^5.1.2",
     "@styled-system/theme-get": "^5.1.2",
+    "csstype": "^2.6.7",
     "emotion": "^10.0.23",
     "emotion-theming": "^10.0.19",
     "react": "^16.12.0",
