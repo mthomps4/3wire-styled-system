@@ -3,7 +3,8 @@ import { background, border, color, compose, flexbox, grid, layout, position, sp
 
 const applyBoolStyles = ({ centerContent }) => {
   let styles = '';
-  if (centerContent) styles = styles + 'display: flex; justify-content: center; align-items: center;';
+  if (centerContent)
+    styles = styles + 'display: flex; justify-content: center; align-items: center; align-content: center;';
   return styles;
 };
 

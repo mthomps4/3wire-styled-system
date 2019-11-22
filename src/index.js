@@ -1,4 +1,5 @@
-import { styled, ThemeProvider } from 'emotion-theming';
+import styled from '@emotion/styled';
+import { ThemeProvider } from 'emotion-theming';
 import { Theme as ThemeProps } from 'styled-system';
 import Button from './components/Button';
 import Card from './components/Card';

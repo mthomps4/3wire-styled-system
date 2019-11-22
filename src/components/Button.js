@@ -1,29 +1,42 @@
 import styled from '@emotion/styled';
-import { borders, buttonStyle, flexbox, layout, position, space, textStyle, typography } from 'styled-system';
+import { themeGet } from '@styled-system/theme-get';
+import { border, buttonStyle, color, compose, flexbox, grid, layout, position, space, typography } from 'styled-system';
 
-export const Button = styled('button')`
-  ${buttonStyle};
-  ${borders};
-  ${space};
-  ${typography};
-  ${layout};
-  ${flexbox};
-  ${textStyle};
-  ${position};
-  /**
-  * disabled styles
-  * -- streamlined here rather than variant-dependent in theme.ts
-  */
-  &:disabled {
-    background-color: ${props => props.theme.colors.disabled};
-    color: ${props => props.theme.colors.gray9};
-    &:hover {
-      cursor: not-allowed;
-    }
+const applyBooleanProps = props => {
+  let styles = '';
+  if (props.blue) styles + 'background-color: "blue"';
+  if (props.disabled) {
+    return `
+      &:disabled {
+        background-color: ${themeGet('colors.disabled', '#ccc')(props)};
+        color:${themeGet('colors.disabledText', '#ccc')(props)};
+        &:hover {
+          cursor: not-allowed;
+        }
+      }
+    `;
   }
-`;
+  return styles;
+};
+
+const Button = styled('button')(
+  {},
+  applyBooleanProps,
+  compose(color, buttonStyle, typography, layout, space, border, flexbox, grid, position)
+);
 
 Button.defaultProps = {
-  p: 3,
-  fontSize: 3
+  px: 3,
+  py: 1,
+  fontSize: 2
 };
+
+export default Button;
+
+// '&:disabled': {
+//       backgroundColor: themeGet('colors.disabled', '#ccc')(props),
+//       color: themeGet('colors.disabledText', '#ccc')(props),
+//       '&:hover': {
+//         cursor: 'not-allowed'
+//       }
+//     }

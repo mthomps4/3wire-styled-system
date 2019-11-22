@@ -15,7 +15,9 @@ export default {
     success: '#004506',
     info: '#005459',
     warning: '#783c00',
-    danger: '#570d00'
+    danger: '#570d00',
+    disabled: '#ccc',
+    disabledText: 'white'
   },
   bg: {
     default: 'white',
