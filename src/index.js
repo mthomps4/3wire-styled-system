@@ -1,4 +1,4 @@
-import { ThemeProvider } from 'emotion-theming';
+import { styled, ThemeProvider } from 'emotion-theming';
 import { Theme as ThemeProps } from 'styled-system';
 import Form from './components/forms/Form';
 import Label from './components/forms/Label';
@@ -10,4 +10,17 @@ import Spacer from './components/layout/Spacer';
 import Text from './components/Text';
 import defaultTheme from './defaultTheme';
 
-export { Container, Row, Column, Spacer, Form, TextInput, Label, Text, ThemeProvider, defaultTheme, ThemeProps };
+export {
+  Container,
+  Row,
+  Column,
+  styled,
+  Spacer,
+  Form,
+  TextInput,
+  Label,
+  Text,
+  ThemeProvider,
+  defaultTheme,
+  ThemeProps
+};
