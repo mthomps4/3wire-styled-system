@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { border, boxShadow, compose, flexbox, grid, layout, space } from 'styled-system';
-import { Box } from '../Box';
 
 const applyBooleanProps = props => {
   let styles = '';
@@ -8,7 +7,7 @@ const applyBooleanProps = props => {
   return styles;
 };
 
-export const Card = styled(Box)(
+export const Card = styled('div')(
   {
     boxSizing: 'border-box'
   },
