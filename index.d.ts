@@ -1,7 +1,7 @@
 /// <reference types="node" />
 /// <reference types="@types/styled-system" />
 // FORMs
-import { ButtonProps, ButtonStyleProps } from './src/components/forms/Button';
+import { ButtonProps, StyleProps as ButtonStyleProps } from './src/components/forms/Button';
 import { FormProps, FormStyleProps } from './src/components/forms/Form';
 import { LabelProps } from './src/components/forms/Label';
 import { TextInputProps } from './src/components/forms/TextInput';

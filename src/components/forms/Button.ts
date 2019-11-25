@@ -7,6 +7,7 @@ import {
   border,
   BorderProps,
   buttonStyle,
+  ButtonStyleProps,
   color,
   ColorProps,
   compose,
@@ -28,14 +29,15 @@ import {
   variant
 } from 'styled-system';
 
-export interface ButtonStyleProps {
+export interface StyleProps {
   theme?: Theme;
   variant?: ResponsiveValue<string>;
   disabled?: boolean;
 }
 
 export interface ButtonProps
-  extends ButtonStyleProps,
+  extends Omit<HTMLProps<HTMLButtonElement>, 'color' | 'height' | 'size' | 'width'>,
+    ButtonStyleProps,
     ColorProps,
     LayoutProps,
     SpaceProps,
@@ -44,16 +46,16 @@ export interface ButtonProps
     BackgroundProps,
     TypographyProps,
     BorderProps,
-    PositionProps,
-    Omit<HTMLProps<HTMLButtonElement>, 'type' | 'color' | 'height' | 'size' | 'width'> {
-  color?: string;
+    PositionProps {
+  // color?: ResponsiveValue<CSS.ColorProperty>;
+  color?: CSS.ColorProperty;
   width?: ResponsiveValue<CSS.WidthProperty<TLengthStyledSystem>>;
   height?: ResponsiveValue<CSS.WidthProperty<TLengthStyledSystem>>;
   size?: ResponsiveValue<CSS.HeightProperty<TLengthStyledSystem>>;
   type?: 'button' | 'submit' | 'reset' | undefined;
 }
 
-const applyBooleanProps = (props: ButtonStyleProps) => {
+const applyBooleanProps = (props: StyleProps) => {
   let styles = '';
   if (props.disabled) {
     return `
