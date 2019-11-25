@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { themeGet } from '@styled-system/theme-get';
+import * as CSS from 'csstype';
 import { HTMLProps } from 'react';
 import {
   BackgroundProps,
@@ -21,6 +22,7 @@ import {
   space,
   SpaceProps,
   Theme,
+  TLengthStyledSystem,
   typography,
   TypographyProps,
   variant
@@ -45,6 +47,9 @@ export interface ButtonProps
     PositionProps,
     Omit<HTMLProps<HTMLButtonElement>, 'type' | 'color' | 'height' | 'size' | 'width'> {
   color?: string;
+  width?: ResponsiveValue<CSS.WidthProperty<TLengthStyledSystem>>;
+  height?: ResponsiveValue<CSS.WidthProperty<TLengthStyledSystem>>;
+  size?: ResponsiveValue<CSS.HeightProperty<TLengthStyledSystem>>;
   type?: 'button' | 'submit' | 'reset' | undefined;
 }
 
