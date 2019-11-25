@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { HTMLProps } from 'react';
 import {
   background,
   BackgroundProps,
@@ -44,7 +45,10 @@ export interface ContainerProps
     FlexboxProps,
     BackgroundProps,
     BorderProps,
-    PositionProps {}
+    PositionProps,
+    Omit<HTMLProps<HTMLDivElement>, 'color' | 'height' | 'size' | 'width'> {
+  color?: string;
+}
 
 const applyBoolStyles = ({ centerContent }: ContainerStyleProps) => {
   let styles = '';
@@ -67,6 +71,7 @@ const Container = styled('div')<ContainerProps>(
     position,
     flexbox,
     grid,
+    // Just for testing -- Made actual Row and Column
     variant({
       variants: {
         row: {
