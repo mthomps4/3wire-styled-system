@@ -23,17 +23,10 @@ import {
   variant
 } from 'styled-system';
 
-// const textColor = style({
-//   prop: 'textColor',
-//   cssProperty: 'color',
-//   key: 'colors'
-// });
-
 export interface ContainerStyleProps {
   theme?: Theme;
   variant?: ResponsiveValue<string>;
   centerContent?: Boolean;
-  // textColor?: ResponsiveValue<CSS.ColorProperty>;
 }
 
 export interface ContainerProps
@@ -49,7 +42,6 @@ export interface ContainerProps
     Omit<HTMLProps<HTMLDivElement>, 'color' | 'height' | 'size' | 'width'> {
   color?: string;
 }
-
 const applyBoolStyles = ({ centerContent }: ContainerStyleProps) => {
   let styles = '';
   if (centerContent) styles = styles + 'display: flex; justify-content: center; align-items: center;';
@@ -62,7 +54,6 @@ const Container = styled('div')<ContainerProps>(
   },
   applyBoolStyles,
   compose(
-    // textColor,
     space,
     layout,
     color,
@@ -71,7 +62,7 @@ const Container = styled('div')<ContainerProps>(
     position,
     flexbox,
     grid,
-    // Just for testing -- Made actual Row and Column
+    // Just for testing -- use actual Row and Column components
     variant({
       variants: {
         row: {

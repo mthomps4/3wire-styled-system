@@ -10,10 +10,8 @@ const applyBoolStyles = ({ centerContent }) => {
 };
 const Container = styled_1.default('div')({
     boxSizing: 'border-box'
-}, applyBoolStyles, styled_system_1.compose(
-// textColor,
-styled_system_1.space, styled_system_1.layout, styled_system_1.color, styled_system_1.background, styled_system_1.border, styled_system_1.position, styled_system_1.flexbox, styled_system_1.grid, 
-// Just for testing -- Made actual Row and Column
+}, applyBoolStyles, styled_system_1.compose(styled_system_1.space, styled_system_1.layout, styled_system_1.color, styled_system_1.background, styled_system_1.border, styled_system_1.position, styled_system_1.flexbox, styled_system_1.grid, 
+// Just for testing -- use actual Row and Column components
 styled_system_1.variant({
     variants: {
         row: {
